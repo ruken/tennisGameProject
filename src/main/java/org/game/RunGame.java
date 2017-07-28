@@ -28,7 +28,19 @@ public class RunGame {
   int    player2PointsT = 0;
   int    pointsT        = -1;
   /*-------- Start of Code ----------*/
-  
+    for(int roundT=1; !gameT.isGameOver(); roundT++) {
+      logC.info("Round "+roundT);
+
+      if (randomPointsT.nextInt(2) == 0) {
+        logC.info("Player 1 was awarded 1 point");
+        gameT.playRound(1, 0);
+        continue;
+      } /*endif*/
+
+      logC.info("Player 2 was awarded 1 point");
+      gameT.playRound(0, 1);
+
+    } /*endwhile*/
     logC.info("GAME OVER, Player "+gameT.whoWon()+" won!");
 
   } /* END OF main */
