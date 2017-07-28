@@ -2,10 +2,15 @@
  * Created by ruken on 7/14/17.
  */
 
-package tennisGameSourceCode;
+package org.game.tennis;
 
-public class TennisGame {
+import org.game.Game;
+import org.apache.log4j.Logger;
 
+public class TennisGame implements Game {
+
+    private static final Logger logC = Logger.getLogger(Game.class);
+    private boolean isGameOverI = false;
     private Player player1;
     private Player player2;
 
@@ -61,6 +66,35 @@ public class TennisGame {
 
     }
 
+  //This should return either 1 or 2 which specified which player won the game
+  // 1 means player 1 won the game
+  // 2 means player 2 won the game
+  public int whoWon() {
+    /*---- Local Variable Declares ----*/
+    int playerWhoWon = -1;
+    /*-------- Start of Code ----------*/
+    return(playerWhoWon);
+
+  } /* END OF whoWon */
+
+  //This method returns true if the game has ended, which means someone has won
+  //Should return false otherwise
+  public boolean isGameOver() {
+    /*---- Local Variable Declares ----*/
+    /*-------- Start of Code ----------*/
+
+    return(isGameOverI);
+
+  } /* END OF is GameOver */
+
+  //This method takes in 2 parameters
+  // player1Points is the amount of points awarded to player 1 for the round
+  // player2Points is the amount of points awarded to player 2 for the round
+  public void playRound(int player1PointsP, int player2PointsP) {
+    /*---- Local Variable Declares ----*/
+    /*-------- Start of Code ----------*/
+
+  } /* END OF playRound */
 }
 
 /* END OF class TennisGame */

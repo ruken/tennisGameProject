@@ -1,7 +1,7 @@
 /**
  * Created by ruken on 7/14/17.
  */
-package tennisGameSourceCode;
+package org.game.tennis;
 
 public class Player{
 
