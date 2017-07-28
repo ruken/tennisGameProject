@@ -5,16 +5,23 @@ package org.game.tennis;
 
 public class Player{
 
+    int score = 0;
+    String name;
+
     public Player(){
 
     }
 
-    int score;
+    public void setScore(int point){
+        score = score + point;
+    }
+
+
     public int getScore(){
         return score;
     }
 
-    String name;
+
     public String getName(){
         return name;
     }
