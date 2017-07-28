@@ -28,9 +28,12 @@ public class RunGame {
   int    player2PointsT = 0;
   int    pointsT        = -1;
   /*-------- Start of Code ----------*/
+    // This is an infinite loop, runs until the game is over.
     for(int roundT=1; !gameT.isGameOver(); roundT++) {
       logC.info("Round "+roundT);
 
+      //The random number generator generates either a 0 or a 1
+      //If it generates a 0 that means player 1 is awarded points
       if (randomPointsT.nextInt(2) == 0) {
         logC.info("Player 1 was awarded 1 point");
         gameT.playRound(1, 0);
@@ -38,9 +41,12 @@ public class RunGame {
       } /*endif*/
 
       logC.info("Player 2 was awarded 1 point");
+      //If it generates a 1 that means player 2 is awarded points
       gameT.playRound(0, 1);
 
     } /*endwhile*/
+
+    //If we got here then the game is over..print out who won
     logC.info("GAME OVER, Player "+gameT.whoWon()+" won!");
 
   } /* END OF main */
