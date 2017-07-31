@@ -16,6 +16,8 @@ public class TennisGame implements Game {
 
     private int playerWhoWon = -1;
 
+    private String playerName = "";
+
     public TennisGame (Player player1, Player player2){
         this.player1 = player1;
         this.player2 = player2;
@@ -51,9 +53,20 @@ public class TennisGame implements Game {
     player1.setScore(player1PointsP);
     player2.setScore(player2PointsP);
 
+    if (player1PointsP >0){
+        logC.info(player1.getName() + " was awarded 1 point");
+    } else{
+        logC.info(player2.getName() + " was awarded 1 point");
+    }
+
     checkWhoWon();
 
   } /* END OF playRound */
+
+    public String getPlayerName(){
+
+        return(playerName);
+    }
 
     public void checkWhoWon(){
 
@@ -61,10 +74,13 @@ public class TennisGame implements Game {
             if(player1.getScore() == player2.getScore() + 2){
                 playerWhoWon = 1;
                 isGameOverI = true;
+                playerName = player1.getName();
+
             }
         else if (player2.getScore() == player1.getScore() + 2){
                 playerWhoWon = 2;
                 isGameOverI = true;
+                playerName = player2.getName();
 
             }
 
@@ -72,9 +88,12 @@ public class TennisGame implements Game {
             if(player1.getScore() == 4){
                 playerWhoWon = 1;
                 isGameOverI = true;
+                playerName = player1.getName();
+
             }else if (player2.getScore() == 4){
                 playerWhoWon = 2;
                 isGameOverI = true;
+                playerName = player2.getName();
             }
 
         }

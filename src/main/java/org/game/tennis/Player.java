@@ -8,7 +8,8 @@ public class Player{
     int score = 0;
     String name;
 
-    public Player(){
+    public Player(String name){
+        this.name = name;
 
     }
 

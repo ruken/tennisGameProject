@@ -29,6 +29,9 @@ public interface Game {
   // player2Points is the amount of points awarded to player 2 for the round
   public void playRound(int player1PointsP, int player2PointsP);
 
+  public String getPlayerName();
+
+
 } /* END OF class Game */
 
 /* END OF SOURCE FILE */

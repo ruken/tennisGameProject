@@ -22,7 +22,7 @@ public class RunGame {
 
   public static void main (String[] Pargs) {
   /*---- Local Variable Declares ----*/
-  Game   gameT          = new TennisGame(new Player(), new Player());
+  Game   gameT          = new TennisGame(new Player("Kevin"), new Player("Dorothy"));
   Random randomPointsT  = new Random();
   int    player1PointsT = 0;
   int    player2PointsT = 0;
@@ -35,19 +35,17 @@ public class RunGame {
       //The random number generator generates either a 0 or a 1
       //If it generates a 0 that means player 1 is awarded points
       if (randomPointsT.nextInt(2) == 0) {
-        logC.info("Player 1 was awarded 1 point");
         gameT.playRound(1, 0);
         continue;
       } /*endif*/
 
-      logC.info("Player 2 was awarded 1 point");
       //If it generates a 1 that means player 2 is awarded points
       gameT.playRound(0, 1);
 
     } /*endwhile*/
 
     //If we got here then the game is over..print out who won
-    logC.info("GAME OVER, Player "+gameT.whoWon()+" won!");
+    logC.info("GAME OVER, Player "+gameT.whoWon() + ", " + gameT.getPlayerName() + " won!");
 
   } /* END OF main */
   
