@@ -68,9 +68,21 @@ public class TennisGame implements Game {
         return(playerName);
     }
 
+    //public String getScoreName(){
+
+    //    return(scoreName);
+    //}
+
     public void checkWhoWon(){
 
+        logC.info(player1.getScore() + "-" + player2.getScore());
+
+
         if(player1.getScore() >=3 && player2.getScore() >=3){
+            if(player1.getScore() == player2.getScore()){
+                logC.info("Deuce! - Must win by 2 points!");
+            }
+
             if(player1.getScore() == player2.getScore() + 2){
                 playerWhoWon = 1;
                 isGameOverI = true;

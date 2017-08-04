@@ -32,6 +32,9 @@ public interface Game {
   public String getPlayerName();
 
 
+  //public String getScoreName();
+
+
 } /* END OF class Game */
 
 /* END OF SOURCE FILE */
