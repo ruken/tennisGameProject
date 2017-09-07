@@ -9,8 +9,7 @@ import java.util.Random;
 **
 ** Class to run the tennis game.
 **
-** @author Erick Santos
-**
+
 ** @version 1.0
 **
 ***************************************************************************
