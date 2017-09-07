@@ -5,7 +5,7 @@ import java.util.Random;
 **
 ** Interface that a game needs to implement.
 **
-** @author Erick Santos
+*
 **
 ** @version 1.0
 **
